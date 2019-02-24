@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> previous work</title>
+         <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+   <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+<a class="navbar-brand" href="">Irwing's Portfolio</a>
+<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav"> 
+        <li class="nav-item">
+            <a class="nav-link" href="aboutme.html">About Me</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="portfolio.html">Portfolio</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+        <li>
+    </ul>
+  </div>  
+</nav>
+<br>
+<h2 style="text-align:center">Completed Project</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 4</div>
+    <a href="https://ide.c9.io/irwingv123/buzzfeedproject">
+    <img src="https://i.postimg.cc/yx1DZPH8/Capture.jpg" style="width:100%">
+    </a>
+  </div>
+
+  <div class="mySlides">
+    <a href="https://ide.c9.io/irwingv123/rockpaperscissors">
+    <div class="numbertext">2 / 4</div>
+    <img src="https://i.postimg.cc/bv0Y9tLD/Capture22.jpg" style="width:100%">
+    </a>
+  </div>
+
+  <div class="mySlides">
+    <a href="https://ide.c9.io/irwingv123/fanpage">
+    <div class="numbertext">3 / 4</div>
+    <img src="https://i.postimg.cc/CxTVrKRj/Capture2323.jpg" style="width:100%">
+    </a>
+  </div>
+    
+  <div class="mySlides">
+    <a href="https://ide.c9.io/irwingv123/playlistproject">
+    <div class="numbertext">4 / 4</div>
+    <img src="https://i.postimg.cc/h4XjHftw/Capture3434.jpgv" style="width:100%">
+    </a>
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="https://i.postimg.cc/yx1DZPH8/Capture.jpg" style="width:100%" onclick="currentSlide(1)" alt="Find out your corresponding Pokemon">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://i.postimg.cc/bv0Y9tLD/Capture22.jpg" style="width:100%" onclick="currentSlide(2)" alt="Can you win? Test your skills against a computer">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://i.postimg.cc/CxTVrKRj/Capture2323.jpg" style="width:100%" onclick="currentSlide(3)" alt="Found out the latest news on Riverdale">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://i.postimg.cc/h4XjHftw/Capture3434.jpg" style="width:100%" onclick="currentSlide(4)" alt="Create your playlist with your favorite songs">
+  </div>
+</div>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    </body>
+</html>
